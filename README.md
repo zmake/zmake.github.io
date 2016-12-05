@@ -2,14 +2,11 @@
 
 zmake is a multi-platform build system generator like CMake or SCons, but designed to be lightweight. Its file enumeration will auto-add new files unless they match an ignore pattern. It checks [filenames](../master/src/examples/example/Example_SuffixPlatforms_Win.cpp) and [directories](../master/src/examples/example_subdirectory/plat_win32) to determine which configurations a file should be compiled for.
 
-![image of zmake.sln in Visual Studio](../master/doc/example_ide.png "zmake.sln in Visual Studio")
-
 ## What does it do?
 
 zmake is intended to run as a pre-build step for make or Visual Studio. It recurses from specified root directories and overwrites outdated vcxproj and Makefiles.
 
 Examples of zmake generated output: [Makefile](../master/src/zmake/Makefile), [vcxproj](../master/.zproj/.%20zmake.vcxproj)
-
 
 ## What does it not do?
 
@@ -24,3 +21,6 @@ Currently it does not support Xcode (because of the pbxproj file format). If you
 Individual projects and subdirectories may include parameter overrides with a file named [zmake.ztxt](../master/src/link_zmake/zmake.ztxt). The complete list of overrideable parameters is defined in [src/zmake/ProjectData.cpp](../master/src/zmake/ProjectData.cpp) (look for WTON_MEMBER)
 
 zmake is built with zmake. Look at its [examples](../master/src/examples) directory for many use cases.
+
+![image of zmake.sln in Visual Studio](../master/doc/example_ide.png "zmake.sln in Visual Studio")
+
