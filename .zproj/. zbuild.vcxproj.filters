@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="zmake">
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\compiler.props" />
+    <None Include="$(ZmakeProjRoot)\config.mk" />
+    <None Include="$(ZmakeProjRoot)\config_osx.mk" />
+    <None Include="$(ZmakeProjRoot)\globals.props" />
+    <None Include="$(ZmakeProjRoot)\linker.props" />
+    <None Include="$(ZmakeProjRoot)\root.mk" />
+    <None Include="$(ZmakeProjRoot)\zmake.ztxt" />
+    <None Include="$(ZmakeProjRoot)\zmake\zmake-config.ztxt">
+      <Filter>zmake</Filter>
+    </None>
+    <None Include="$(ZmakeProjRoot)\zmake_base.mk" />
+    <None Include="$(ZmakeProjRoot)\zmake_base.props" />
+    <None Include="$(ZmakeProjRoot)\zmake_dll.props" />
+    <None Include="$(ZmakeProjRoot)\zmake_exe.props" />
+    <None Include="$(ZmakeProjRoot)\zmake_lib.props" />
+    <None Include="$(ZmakeProjRoot)\zmake_top.mk" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ThirdExample|Win32">
+      <Configuration>ThirdExample</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C65B898E-6581-380A-C65B-898E6581380A}</ProjectGuid>
+    <RootNamespace>. zmake</RootNamespace>
+    <ZmakeRootName>zmake</ZmakeRootName>
+    <ZmakeProjRoot>..\src\zmake</ZmakeProjRoot>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)src\zbuild\zmake_lib.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(SolutionDir)src\zbuild\zmake_base.props" />
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\Config.cpp" />
+    <ClCompile Include="$(ZmakeProjRoot)\Pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+<ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(ZmakeProjRoot)\ProjectData.cpp" />
+    <ClCompile Include="$(ZmakeProjRoot)\Zmake.cpp" />
+    <ClCompile Include="$(ZmakeProjRoot)\prim\File.cpp" />
+    <ClCompile Include="$(ZmakeProjRoot)\prim\FileMgr.cpp" />
+    <ClCompile Include="$(ZmakeProjRoot)\prim\String.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ZmakeProjRoot)\Config.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\ProjectData.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\_zmake.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\prim\Array.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\prim\File.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\prim\FileMgr.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\prim\String.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\prim\prim.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

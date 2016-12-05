@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ThirdExample|Win32">
+      <Configuration>ThirdExample</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{15416F81-7526-1269-1541-6F8175261269}</ProjectGuid>
+    <RootNamespace>+ example_subdirectory</RootNamespace>
+    <ZmakeRootName>example_subdirectory</ZmakeRootName>
+    <ZmakeProjRoot>..\src\examples\example_subdirectory</ZmakeProjRoot>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)src\zbuild\zmake_lib.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(SolutionDir)src\zbuild\zmake_base.props" />
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\Pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+<ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\config_all\Example_All_Subdirectory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\config_debug\Example_Debug_Subdirectory.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='ThirdExample'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\config_release\Example_Release_Subdirectory.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='ThirdExample'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\config_two\Example_Two_Subdirectory.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\plat_none\nest\nest\Example_None_Subdirectory.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\plat_osx\Example_Osx_Subdirectory.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\plat_win32\Example_Win32_Subdirectory.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ZmakeProjRoot)\_example_subdirectory.h" />
+    <None Include="$(ZmakeProjRoot)\zmake.ztxt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\config_all\zmake.ztxt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\config_debug\zmake.ztxt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\config_release\zmake.ztxt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\config_two\zmake.ztxt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\plat_none\zmake.ztxt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\plat_osx\zmake.ztxt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\plat_win32\zmake.ztxt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="prim">
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\Config.cpp" />
+    <ClCompile Include="$(ZmakeProjRoot)\Pch.cpp" />
+    <ClCompile Include="$(ZmakeProjRoot)\ProjectData.cpp" />
+    <ClCompile Include="$(ZmakeProjRoot)\Zmake.cpp" />
+    <ClCompile Include="$(ZmakeProjRoot)\prim\File.cpp">
+      <Filter>prim</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ZmakeProjRoot)\prim\FileMgr.cpp">
+      <Filter>prim</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ZmakeProjRoot)\prim\String.cpp">
+      <Filter>prim</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ZmakeProjRoot)\Config.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\ProjectData.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\_zmake.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\prim\Array.h">
+      <Filter>prim</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ZmakeProjRoot)\prim\File.h">
+      <Filter>prim</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ZmakeProjRoot)\prim\FileMgr.h">
+      <Filter>prim</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ZmakeProjRoot)\prim\String.h">
+      <Filter>prim</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ZmakeProjRoot)\prim\prim.h">
+      <Filter>prim</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

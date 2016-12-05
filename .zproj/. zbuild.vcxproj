@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ThirdExample|Win32">
+      <Configuration>ThirdExample</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C2B89E09-342E-EC7A-C2B8-9E09342EEC7A}</ProjectGuid>
+    <RootNamespace>. zbuild</RootNamespace>
+    <ZmakeRootName>zbuild</ZmakeRootName>
+    <ZmakeProjRoot>..\src\zbuild</ZmakeProjRoot>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)src\zbuild\zmake_lib.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(SolutionDir)src\zbuild\zmake_base.props" />
+
+  <ItemGroup>
+    <CustomBuild Include="ZmakeCommand">
+      <Message>zmake</Message>
+      <Command>
+         if exist $(SolutionDir)src/zbuild/zmake/zmake.exe (
+            $(SolutionDir)src/zbuild/zmake/zmake.exe $(SolutionDir)src/zbuild/zmake/zmake-config.ztxt --sln
+         ) else (
+            echo warning: zmake.exe missing
+         )
+         </Command>
+      <Outputs>alwaysbuild</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\compiler.props" />
+    <None Include="$(ZmakeProjRoot)\config.mk" />
+    <None Include="$(ZmakeProjRoot)\config_osx.mk" />
+    <None Include="$(ZmakeProjRoot)\globals.props" />
+    <None Include="$(ZmakeProjRoot)\linker.props" />
+    <None Include="$(ZmakeProjRoot)\root.mk" />
+    <None Include="$(ZmakeProjRoot)\zmake.ztxt" />
+    <None Include="$(ZmakeProjRoot)\zmake\zmake-config.ztxt" />
+    <None Include="$(ZmakeProjRoot)\zmake_base.mk" />
+    <None Include="$(ZmakeProjRoot)\zmake_base.props" />
+    <None Include="$(ZmakeProjRoot)\zmake_dll.props" />
+    <None Include="$(ZmakeProjRoot)\zmake_exe.props" />
+    <None Include="$(ZmakeProjRoot)\zmake_lib.props" />
+    <None Include="$(ZmakeProjRoot)\zmake_top.mk" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

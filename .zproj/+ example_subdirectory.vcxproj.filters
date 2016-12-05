@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="config_all">
+    </Filter>
+    <Filter Include="config_debug">
+    </Filter>
+    <Filter Include="config_release">
+    </Filter>
+    <Filter Include="config_two">
+    </Filter>
+    <Filter Include="plat_none">
+    </Filter>
+    <Filter Include="plat_osx">
+    </Filter>
+    <Filter Include="plat_win32">
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\Pch.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\config_all\Example_All_Subdirectory.cpp">
+      <Filter>config_all</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\config_debug\Example_Debug_Subdirectory.cpp">
+      <Filter>config_debug</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\config_release\Example_Release_Subdirectory.cpp">
+      <Filter>config_release</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\config_two\Example_Two_Subdirectory.cpp">
+      <Filter>config_two</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\plat_none\nest\nest\Example_None_Subdirectory.cpp">
+      <Filter>plat_none</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\plat_osx\Example_Osx_Subdirectory.cpp">
+      <Filter>plat_osx</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\plat_win32\Example_Win32_Subdirectory.cpp">
+      <Filter>plat_win32</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ZmakeProjRoot)\_example_subdirectory.h" />
+    <None Include="$(ZmakeProjRoot)\zmake.ztxt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\config_all\zmake.ztxt">
+      <Filter>config_all</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\config_debug\zmake.ztxt">
+      <Filter>config_debug</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\config_release\zmake.ztxt">
+      <Filter>config_release</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\config_two\zmake.ztxt">
+      <Filter>config_two</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\plat_none\zmake.ztxt">
+      <Filter>plat_none</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\plat_osx\zmake.ztxt">
+      <Filter>plat_osx</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(ZmakeProjRoot)\plat_win32\zmake.ztxt">
+      <Filter>plat_win32</Filter>
+    </None>
+  </ItemGroup>
+</Project>

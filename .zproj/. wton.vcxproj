@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ThirdExample|Win32">
+      <Configuration>ThirdExample</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9250F9D2-2050-9712-9250-F9D220509712}</ProjectGuid>
+    <RootNamespace>. wton</RootNamespace>
+    <ZmakeRootName>wton</ZmakeRootName>
+    <ZmakeProjRoot>..\src\wton</ZmakeProjRoot>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)src\zbuild\zmake_lib.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(SolutionDir)src\zbuild\zmake_base.props" />
+  <ItemGroup>
+    <ClCompile Include="$(ZmakeProjRoot)\ClassNotation.cpp" />
+    <ClCompile Include="$(ZmakeProjRoot)\Pch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+<ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="$(ZmakeProjRoot)\StrCat.cpp" />
+    <ClCompile Include="$(ZmakeProjRoot)\TokenFile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ZmakeProjRoot)\StrCat.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\TokenFile.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\Types.h" />
+    <ClInclude Include="$(ZmakeProjRoot)\_wton.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
