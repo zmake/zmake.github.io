@@ -1,0 +1,11 @@
+1. write documentation
+
+2. minor issues to maybe fix:
+assert there aren't two files of the same name in the same project, or fix the obj output directory structure (MSVC)
+assert there aren't two projects of the same name in the solution
+parse 'token}' as two tokens
+handle this error better: '"Win"32"'
+test parse failure scenarios
+test can't write to file (read-only) scenario
+inherit zmake-config parameters from parent config file
+if a file will be written, report relevant changes (added file X, removed file Y)

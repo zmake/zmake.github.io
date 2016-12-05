@@ -1,0 +1,68 @@
+// Copyright (c) 2014 - 2016 Roger Hanna
+// For conditions of distribution and use, see copyright notice in ~/src/zmake/_zmake.h
+
+// Global zmake configuration
+
+{ str ZmakeToRoot = ../../ }
+{ str RootToProps = zbuild/ }
+{ str RootToSln   = ../ }
+{ str SlnToRoot   = src/ } // TODO: temp - calculate this
+{ str[] IncludePatterns =
+   {
+      *
+      examples/*
+   }
+}
+{ str[] IgnorePatterns =
+   {
+      Makefile
+      *.orig
+      *~
+      #*
+      .*
+      "* - Copy.*"
+      *.pdb
+      *.ilk
+      *.exe
+   }
+}
+{ str[] AllPlatforms  = { Win32 Osx } }
+{ str[] AllConfigs    = { Debug Release ThirdExample } }
+{ str[] MsvcPlatforms = { Win32 } }
+{ str[] MakePlatforms = { Osx } }
+
+{ str MsSlnFormatVersion = 11.00 }
+
+{ str PchPattern         = Pch }
+{ str PchPrefix          = _ }
+{ str LibPattern         = src/lib/ }
+
+{ map[str,str] SolutionPlatform =
+   {
+      Win32 PC
+   }
+}
+{ map[str,str] ExtensionItem =
+   {
+      .c   ClCompile
+      .cpp ClCompile
+      .h   ClInclude
+      .hpp ClInclude
+      .lib Library
+      .rc  ResourceCompile
+   }
+}
+{ str[] CompilationUnitExtensions = { .c .cpp .mm .lib } }
+{ map[str,str[]] SuffixPlatforms =
+   {
+      _Win { Win32 }
+      _Mac { Osx }
+   }
+}
+{ str StubSuffix = _Stub }
+
+{ str[] AdditionalFileProps =
+   {
+      "Pch.cpp" "<ExcludedFromBuild Condition=\"'$(Configuration)'=='Debug'\">true</ExcludedFromBuild>"
+   }
+}

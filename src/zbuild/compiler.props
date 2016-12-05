@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 - 2016 Roger Hanna -->
+<!-- For conditions of distribution and use, see copyright notice in ~/src/zmake/_zmake.h -->
+
+<!-- example compiler options file -->
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+   <ItemDefinitionGroup>
+      <ClCompile>
+         <AdditionalIncludeDirectories>$(ZMCodeRoot);$(ZMCodeRoot)/examples;$(ZmakeProjRoot)</AdditionalIncludeDirectories>
+         <PrecompiledHeaderFile>$(ZmakeRootName)/_$(ZmakeRootName).h</PrecompiledHeaderFile>
+         <PrecompiledHeader>Use</PrecompiledHeader>
+         <PrecompiledHeader Condition="'$(Configuration)'=='Debug'">NotUsing</PrecompiledHeader>
+         <WarningLevel>Level3</WarningLevel>
+         <MultiProcessorCompilation>true</MultiProcessorCompilation>
+
+         <Optimization Condition="'$(Configuration)'=='Debug'">Disabled</Optimization>
+         <Optimization Condition="'$(Configuration)'!='Debug'">Full</Optimization>
+
+         <OmitFramePointers>$(ZMNDebug)</OmitFramePointers>
+         <StringPooling>$(ZMNDebug)</StringPooling>
+         <ExceptionHandling Condition="'$(Configuration)'!='Debug'">false</ExceptionHandling>
+         <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+         <BufferSecurityCheck>$(ZMDebug)</BufferSecurityCheck>
+         <FloatingPointModel Condition="'$(Configuration)'!='Debug'">Fast</FloatingPointModel>
+         <RuntimeTypeInfo>false</RuntimeTypeInfo>
+         <TreatWarningAsError>true</TreatWarningAsError>
+
+         <InlineFunctionExpansion Condition="'$(Configuration)'!='Debug'">AnySuitable</InlineFunctionExpansion>
+         <IntrinsicFunctions>$(ZMNDebug)</IntrinsicFunctions>
+         <EnableFiberSafeOptimizations>$(ZMNDebug)</EnableFiberSafeOptimizations>
+
+         <PreprocessorDefinitions Condition="'$(Configuration)'=='Debug'">ZM_DEBUG;WTON_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      </ClCompile>
+   </ItemDefinitionGroup>
+</Project>

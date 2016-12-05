@@ -1,0 +1,19 @@
+// Copyright (c) 2014 - 2016 Roger Hanna
+// For conditions of distribution and use, see copyright notice in ~/src/zmake/_zmake.h
+
+{ str AdditionalProps = "
+  <ItemGroup>
+    <CustomBuild Include=\"ZmakeCommand\">
+      <Message>zmake</Message>
+      <Command>
+         if exist $(SolutionDir)src/zbuild/zmake/zmake.exe (
+            $(SolutionDir)src/zbuild/zmake/zmake.exe $(SolutionDir)src/zbuild/zmake/zmake-config.ztxt --sln
+         ) else (
+            echo warning: zmake.exe missing
+         )
+         </Command>
+      <Outputs>alwaysbuild</Outputs>
+    </CustomBuild>
+  </ItemGroup>"
+}
+{ num Prebuild = 1 }

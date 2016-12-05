@@ -1,0 +1,15 @@
+In Visual Studio, adding a file without reloading will compile the first time, but Visual Studio will not detect changes and recompile that file properly until you reload the solution.  Workaround: if you add a file, reload asap
+
+To change versions of Visual Studio you will need to change two things:
+
+src/zbuild/zmake/zmake-config.ztxt:
+-{ str MsSlnFormatVersion = 11.00 }
+Visual Studio 2012, 2013:
++{ str MsSlnFormatVersion = 12.00 }
+
+and src/zbuild/globals.props
+-      <PlatformToolset>v100</PlatformToolset>
+Visual Studio 2012:
++      <PlatformToolset>v110</PlatformToolset>
+Visual Studio 2013:
++      <PlatformToolset>v120</PlatformToolset>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 - 2016 Roger Hanna -->
+<!-- For conditions of distribution and use, see copyright notice in ~/src/zmake/_zmake.h -->
+
+<!-- example global definition file -->
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+   <PropertyGroup>
+      <ZMSolutionDir>$(SolutionDir)</ZMSolutionDir>
+      <ZMProjectDir>$(ProjectDir)</ZMProjectDir>
+      <ZMTempDir>$(ProjectDir)temp\$(Platform)_$(Configuration)\</ZMTempDir>
+      <ZMCodeRoot>$(SolutionDir)src/</ZMCodeRoot>
+
+      <!-- Debug Defines -->
+      <ZMDebug Condition="'$(Configuration)'=='Debug'">true</ZMDebug>
+      <ZMDebug Condition="'$(Configuration)'!='Debug'">false</ZMDebug>
+      <ZMNDebug Condition="'$(Configuration)'=='Debug'">false</ZMNDebug>
+      <ZMNDebug Condition="'$(Configuration)'!='Debug'">true</ZMNDebug>
+
+      <!-- change this if you're not using Visual Studio 2010 -->
+      <PlatformToolset>v100</PlatformToolset>
+   </PropertyGroup>
+
+</Project>

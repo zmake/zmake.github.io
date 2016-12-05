@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (c) 2014 - 2016 Roger Hanna -->
+<!-- For conditions of distribution and use, see copyright notice in ~/src/zmake/_zmake.h -->
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+   <Import Project="globals.props" />
+
+   <PropertyGroup Label="Configuration">
+      <ConfigurationType>Application</ConfigurationType>
+      <WholeProgramOptimization>$(ZMNDebug)</WholeProgramOptimization>
+      <GenerateManifest>false</GenerateManifest>
+      <ProjectDir>$(SolutionDir).zproj\</ProjectDir>
+   </PropertyGroup>
+
+   <PropertyGroup>
+      <OutDir>$(SolutionDir)src\zbuild\zmake\</OutDir>
+   </PropertyGroup>
+</Project>

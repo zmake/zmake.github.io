@@ -1,0 +1,19 @@
+// Glug Glug LLC (c) 2010 - 2016
+// Contact: ardonite
+
+{ num Exe = 1 }
+{ str Prefix = "#" }
+{ str AdditionalMake =
+"TARGETROOT = src/zbuild/zmake/
+TARGET = zmake"
+}
+{ str AdditionalProps =
+"  <ItemDefinitionGroup>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup>
+    <TargetName>zmake</TargetName>
+  </PropertyGroup>"
+}
