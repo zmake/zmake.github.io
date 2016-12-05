@@ -7,6 +7,8 @@ WHAT DOES IT DO?
 
 zmake is intended to run as a pre-build step for make or Visual Studio. It recurses your source directories and overwrites out of date vcxproj and Makefiles.
 
+Generated Makefile example: https://github.com/zmake/zmake.github.io/blob/master/src/zmake/Makefile
+
 
 WHAT DOES IT NOT DO?
 
