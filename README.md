@@ -6,7 +6,7 @@ zmake is a build system generator like CMake or SCons, but designed to be light-
 
 zmake is intended to run as a pre-build step for make or Visual Studio. It recurses your source directories and overwrites out of date vcxproj and Makefiles.
 
-Examples of files zmake generates: [Makefile](../blob/master/src/zmake/Makefile), [vcxproj](../blob/master/.zproj/.%20zmake.vcxproj)
+Examples of files zmake generates: [Makefile](../master/src/zmake/Makefile), [vcxproj](../master/.zproj/.%20zmake.vcxproj)
 
 
 ## What does it not do?
