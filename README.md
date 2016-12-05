@@ -2,6 +2,8 @@
 
 zmake is a multi-platform build system generator like CMake or SCons, but designed to be lightweight. Its file enumeration will auto-add new files unless they match an ignore pattern. It checks [filenames](../master/src/examples/example/Example_SuffixPlatforms_Win.cpp) and [directories](../master/src/examples/example_subdirectory/plat_win32) to determine which configurations a file should be compiled for.
 
+![image of zmake.sln in Visual Studio](../master/doc/example_ide.png "zmake.sln in Visual Studio")
+
 ## What does it do?
 
 zmake is intended to run as a pre-build step for make or Visual Studio. It recurses from specified root directories and overwrites outdated vcxproj and Makefiles.
