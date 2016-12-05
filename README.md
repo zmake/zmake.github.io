@@ -1,17 +1,11 @@
 zmake.github.io
 ===============
 
-website for zmake open source project
-
-
-WHAT IS ZMAKE?
-
-zmake is a build system generator like CMake or SCons, but designed to be light-weight. Its opt-out file enumeration enables a compilation unit to be added by simply creating the file.
-
+zmake is a build system generator like CMake or SCons, but designed to be light-weight. Its opt-out file enumeration enables a compilation unit to be added by simply creating the file. It also enables filenames and directories to define which configurations they should be compiled for.
 
 WHAT DOES IT DO?
 
-zmake is intended to run as a pre-build step. It recurses your source directories and overwrites out of date vcxproj and Makefiles.
+zmake is intended to run as a pre-build step for make or Visual Studio. It recurses your source directories and overwrites out of date vcxproj and Makefiles.
 
 
 WHAT DOES IT NOT DO?
@@ -25,3 +19,4 @@ zmake-config.ztxt is the global settings file. The complete list of parameters i
 
 Individual directories may include parameter overrides with a file named zmake.ztxt. The complete list of overrideable parameters is defined in src/zmake/ProjectData.cpp (look for WTON_MEMBER)
 
+zmake is built with zmake. Look at its examples directory for many use cases.
