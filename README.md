@@ -1,6 +1,6 @@
 # zmake
 
-zmake is a build system generator like CMake or SCons, but designed to be light-weight. Its opt-out file enumeration enables a compilation unit to be added by simply creating the file. It also enables filenames and directories to define which configurations they should be compiled for.
+zmake is a build system generator like CMake or SCons, but designed to be light-weight. Its opt-out file enumeration enables a compilation unit to be added by simply creating the file. It also enables [filenames](../master/src/examples/example/Example_SuffixPlatforms_Win.cpp) and [directories](../master/src/examples/example_subdirectory/plat_win32) to be self-documenting, by defining which configurations they should be compiled for.
 
 ## What does it do?
 
