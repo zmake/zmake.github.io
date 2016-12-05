@@ -1,6 +1,6 @@
 # zmake
 
-zmake is a multi-platform build system generator like CMake or SCons, but designed to be light-weight. Its file enumeration will auto-add new files unless they match an ignore pattern. It checks [filenames](../master/src/examples/example/Example_SuffixPlatforms_Win.cpp) and [directories](../master/src/examples/example_subdirectory/plat_win32) to determine which configurations a file should be compiled for.
+zmake is a multi-platform build system generator like CMake or SCons, but designed to be lightweight. Its file enumeration will auto-add new files unless they match an ignore pattern. It checks [filenames](../master/src/examples/example/Example_SuffixPlatforms_Win.cpp) and [directories](../master/src/examples/example_subdirectory/plat_win32) to determine which configurations a file should be compiled for.
 
 ## What does it do?
 
@@ -21,4 +21,4 @@ Currently it does not support Xcode (because of the pbxproj file format). If you
 
 Individual projects and subdirectories may include parameter overrides with a file named [zmake.ztxt](../master/src/link_zmake/zmake.ztxt). The complete list of overrideable parameters is defined in [src/zmake/ProjectData.cpp](../master/src/zmake/ProjectData.cpp) (look for WTON_MEMBER)
 
-zmake is built with zmake. Look at its examples directory for many use cases.
+zmake is built with zmake. Look at its [examples](../master/src/examples) directory for many use cases.
