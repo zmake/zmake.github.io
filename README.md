@@ -11,7 +11,7 @@ Examples of zmake generated output: [Makefile](../master/src/zmake/Makefile), [v
 
 ## What does it not do?
 
-zmake does not manage compiler options. Instead generated vcxprojs import zmake_base.props and either zmake_exe.props, zmake_lib.props, or zmake_dll.props. Generated Makefiles include zmake_top.mk and zmake_base.mk. Users choose their platform specific compiler options.
+zmake does not manage compiler options. Instead generated vcxprojs import zmake_base.props and either zmake_exe.props, zmake_lib.props, or zmake_dll.props. Generated Makefiles include zmake_top.mk and zmake_base.mk. Users define their platform specific compiler options in these files.
 
 Currently it does not support Xcode (because of the pbxproj file format). If you have documentation on this format, I can add support.
 
